@@ -181,6 +181,30 @@
   color: white;
 }
 
+.top-notch-content-a:hover {
+  font-size: 15px;
+  background: #36b37f;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.top-notch-content-a:active {
+  font-size: 15px;
+  background: #008552;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+}
+
 .about-section {
   display: flex;
   flex-direction: column;
