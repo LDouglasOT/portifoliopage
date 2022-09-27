@@ -1,4 +1,3 @@
-
 @media only screen and (max-width: 780px) {
   @font-face {
     font-family: Inter;
@@ -41,7 +40,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    background-image: url('./Assets/Images/header-illsutration-mobile@2x.png');
+    background-image: url("./Assets/Images/header-illsutration-mobile@2x.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -210,7 +209,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('./Assets/Images/illustration-about-me-sec.png');
+  background-image: url("./Assets/Images/illustration-about-me-sec.png");
 }
 
 .about-section-h2 {
@@ -245,9 +244,16 @@
   background-color: #36b37f;
   padding: 15px 20px;
   border-radius: 5px;
-  text-decoration: none;
   color: white;
   cursor: pointer;
+  border: 1px solid #36b37f;
+}
+.resume:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.resume:active {
+  background: #008552;
 }
 
 .lang-frame {
@@ -301,4 +307,70 @@
   line-height: 32px;
   text-align: center;
   color: #344563;
+}
+
+/* Contact form section */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact p {
+  text-align: center;
+  width: 81%;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
+}
+
+input {
+  width: 80%;
+  padding: 17px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #d0d9d4;
+}
+
+textarea {
+  width: 80%;
+  padding: 17px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #d0d9d4;
+}
+
+.last-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+}
+
+.last-contact-li {
+  margin: 5px 10px;
+}
+
+.mail-field {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #42526e;
+  text-decoration: none;
+}
+
+.form-group {
+  margin-top: 160px;
+  width: 40%;
+  height: 5px;
+  border-radius: 5px;
+  background: black;
 }
