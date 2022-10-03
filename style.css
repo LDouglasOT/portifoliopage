@@ -1,22 +1,39 @@
 
 @media only screen and (max-width: 780px) {
+  @font-face {
+    font-family: "inter";
+    src: url("./Assets/fonts/github/Inter-VariableFont_slnt\,wght.ttf");
+  }
+
   body {
     margin: 0;
+
+    /* font-family: "inter"; */
+  }
+
+  header {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   nav {
     display: flex;
     width: 95%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    margin-left: auto;
-    margin-right: auto;
     position: fixed;
   }
 
   .nav-h3 {
     margin-left: 15px;
+    text-decoration: none;
+    color: #172b4d;
   }
 
   .intro-wrapper {
@@ -25,6 +42,9 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+    background-image: url('./Assets/Images/header-illsutration-mobile@2x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .intro-wrappers {
@@ -46,7 +66,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: rgb(14, 158, 14);
+    color: #36b37f;
     font-size: 40px;
     margin: 0;
   }
@@ -144,7 +164,7 @@
 }
 
 .top-notch-content-ul-li {
-  font-size: 15px;
+  font-size: 12px;
   border-radius: 5px;
   border: 0 solid #ebf0ee;
   background-color: #ebf0ee;
