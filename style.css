@@ -1,14 +1,13 @@
 
 @media only screen and (max-width: 780px) {
   @font-face {
-    font-family: "inter";
+    font-family: Inter;
     src: url("./Assets/fonts/github/Inter-VariableFont_slnt\,wght.ttf");
   }
 
   body {
     margin: 0;
-
-    /* font-family: "inter"; */
+    font-family: Inter, sans-serif;
   }
 
   header {
@@ -182,11 +181,36 @@
   color: white;
 }
 
+.top-notch-content-a:hover {
+  font-size: 15px;
+  background: #36b37f;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.top-notch-content-a:active {
+  font-size: 15px;
+  background: #008552;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+}
+
 .about-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('./Assets/Images/illustration-about-me-sec.png');
 }
 
 .about-section-h2 {
@@ -256,6 +280,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .languages-li {
