@@ -518,7 +518,9 @@
     order: 0;
     flex-grow: 0;
   }
-
+html{
+  scroll-behavior: smooth;
+}
   .w-header span {
     margin: 0 3px;
   }
