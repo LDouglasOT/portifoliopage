@@ -6,9 +6,45 @@
   }
 
   .Navmenu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    background: #fff;
+    width: 100%;
+    
+    left: 0;
+    
+    
+    
+  } 
+
+
+  .hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    height: 15px;
+    width: 20px;
+    gap: 3px;
+    z-index: 9999;
+  
+    
+
   }
 
+  .bar {
+    height: 3px;
+    background:gray;
+    
+  }
+
+
+  .Navmenu li {
+    list-style: none;
+  }
+  li a {
+    text-decoration: none;
+  }
   body {
     margin: 0;
     font-family: Inter, sans-serif;
