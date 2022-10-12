@@ -42,7 +42,8 @@
     height: 3px;
     background: gray;
   }
-  html{
+
+  html {
     scroll-behavior: smooth;
   }
 
@@ -485,9 +486,11 @@
   nav {
     display: none;
   }
-a{
-  text-decoration: none;
-}
+
+  a {
+    text-decoration: none;
+  }
+
   .Navmenux {
     display: flex;
     align-items: center;
@@ -501,7 +504,7 @@ a{
     margin: 0 5px;
     color: #1a1b1b;
     font-size: 20px;
-    list-style:none;
+    list-style: none;
   }
 
   .intro-wrapper {
