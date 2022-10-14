@@ -10,46 +10,45 @@ document.querySelectorAll('.nav-links').forEach((navLink) => navLink.addEventLis
     navMenu.classList.remove('active');
   }));
 
-{/* <div class="popout-container">
-  <div class="popout"> */}
+
 const projectlist=[
   {
-    "name":"Portifolio page",
+    "name":"Multi-Post Stories</span><span>Gain+Glory",
      "description":"This is a website developed using html,css and javascript following best cl/ci practices", 
      "featured":"../Assets/Images/header-illsutration-mobile@2x.png", 
      "technologies":["Ruby on rails","css","javascript","html"],
      "live":"ldouglasot.github.io",
      "source":"https://github.com/LDouglasOT/ldouglasot.github.io"
   }, {
-    "name":"Portifolio page",
+    "name":"Multi-Post Stories</span><span>Gain+Glory",
      "description":"This is a website developed using html,css and javascript following best cl/ci practices", 
      "featured":"../Assets/Images/header-illsutration-mobile@2x.png", 
      "technologies":["Ruby on rails","css","javascript","html"],
      "live":"ldouglasot.github.io",
      "source":"https://github.com/LDouglasOT/ldouglasot.github.io"
   },{
-    "name":"Portifolio page",
+    "name":"Multi-Post Stories</span><span>Gain+Glory",
      "description":"This is a website developed using html,css and javascript following best cl/ci practices", 
      "featured":"../Assets/Images/header-illsutration-mobile@2x.png", 
      "technologies":["Ruby on rails","css","javascript","html"],
      "live":"ldouglasot.github.io",
      "source":"https://github.com/LDouglasOT/ldouglasot.github.io"
   },{
-    "name":"Portifolio page",
+    "name":"Multi-Post Stories</span><span>Gain+Glory",
      "description":"This is a website developed using html,css and javascript following best cl/ci practices", 
      "featured":"../Assets/Images/header-illsutration-mobile@2x.png", 
      "technologies":["Ruby on rails","css","javascript","html"],
      "live":"ldouglasot.github.io",
      "source":"https://github.com/LDouglasOT/ldouglasot.github.io"
   },{
-    "name":"Portifolio page",
+    "name":"Multi-Post Stories</span><span>Gain+Glory",
      "description":"This is a website developed using html,css and javascript following best cl/ci practices", 
      "featured":"../Assets/Images/header-illsutration-mobile@2x.png", 
      "technologies":["Ruby on rails","css","javascript","html"],
      "live":"ldouglasot.github.io",
      "source":"https://github.com/LDouglasOT/ldouglasot.github.io"
   },{
-    "name":"Portifolio page",
+    "name":"Multi-Post Stories</span><span>Gain+Glory",
      "description":"This is a website developed using html,css and javascript following best cl/ci practices", 
      "featured":"../Assets/Images/header-illsutration-mobile@2x.png", 
      "technologies":["Ruby on rails","css","javascript","html"],
@@ -65,20 +64,21 @@ window.addEventListener('load', ()=>{
 
   const li=document.createElement('ul')
   li.classList.add('works-ul')
-  const insertitems=(name,description,featured,live,source)=>{
+  const insertitems=(name,description,featured,live,source,technologies)=>{
   return `
 
   <div class="top-notch">
     <img class="imagedescription" src="https://wallpaperaccess.com/full/220746.jpg" alt='capstone' />
     <div class="top-notch-content">
       <h3 class="top-tag">
-        <span>Multi-Post Stories</span><span>Gain+Glory</span>
+        <span>${name}</span>
       </h3>
       <ul class="top-notch-content-ul">
-        <li class="top-notch-content-ul-li">Ruby on Rails</li>
-        <li class="top-notch-content-ul-li">css</li>
-        <li class="top-notch-content-ul-li">Javascript</li>
-        <li class="top-notch-content-ul-li">html</li>
+      
+        <li class="top-notch-content-ul-li">${technologies[0]}</li>
+        <li class="top-notch-content-ul-li">${technologies[1]}</li>
+        <li class="top-notch-content-ul-li">${technologies[2]}</li>
+        <li class="top-notch-content-ul-li">${technologies[3]}</li>
       </ul>
       <br />
       <button class="top-notch-content-a" id='seeproject'>See Project</b>
@@ -91,7 +91,7 @@ window.addEventListener('load', ()=>{
    projectlist.map((item)=>{
     const lists=document.createElement('li')
     lists.classList='list-item'
-    lists.innerHTML=insertitems(item.name, item.description, item.featured, item.live, item.source)
+    lists.innerHTML=insertitems(item.name, item.description, item.featured, item.live, item.source,item.technologies)
     li.appendChild(lists)
    })
    untitlelist.append(li)
@@ -119,6 +119,7 @@ let pop = document.createElement('div')
     <a href="#" class="see">See Source <img src='../Assets/Images/Vector.png' alt="hello" /></a>
   </div>
   `;
+  
   const btnsee=document.querySelector('.popupContainer')
   btnsee.appendChild(pop)
   btnsee.classList.remove('popupContainer')
@@ -126,13 +127,18 @@ let pop = document.createElement('div')
   btnsee.style.display='none'
   const btnclose=document.querySelector('.p-image')
 
-btnclick.addEventListener('click',()=>{
+const btx=document.querySelectorAll('#seeproject').forEach((project) => {
+
+  project.onclick = () =>{
   console.log('itemes')
   btnsee.style.display='flex'
- })
+ }
  btnclose.addEventListener('click',()=>{
   btnsee.style.display='none'
  })
+
+})
+
 } else {
   const btnclick=document.querySelector('#seeproject')
   console.log(btnclick)
@@ -175,20 +181,16 @@ btnclick.addEventListener('click',()=>{
   btnsee.style.display='none'
   const btnclose=document.querySelector('.p-image')
 const deskclose=document.querySelector('.desktop-innerimg')
-deskclose.addEventListener('click',()=>{
-  btnsee.style.display='none' 
+
+const btx=document.querySelectorAll('#seeproject').forEach((project) => {
+console.log(project)
+    deskclose.onclick=()=>{
+      btnsee.style.display='none' 
+    } 
+  project.onclick=()=>{
+
+    btnsee.style.display='flex'
+  }
 })
-
-
-btnclick.addEventListener('click',()=>{
-  console.log('itemes')
-  btnsee.style.display='flex'
- })
- btnclose.addEventListener('click',()=>{
-  btnsee.style.display='none'
- })
-}
-
-
-}
+}}
 
