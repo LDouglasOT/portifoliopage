@@ -20,7 +20,7 @@ const projectlist=[
      "live":"ldouglasot.github.io",
      "source":"https://github.com/LDouglasOT/ldouglasot.github.io"
   }, {
-    "name":"Multi-Post Stories</span><span>Gain+Glory",
+    "name":"Multi-Post Stories",
      "description":"This is a website developed using html,css and javascript following best cl/ci practices", 
      "featured":"../Assets/Images/header-illsutration-mobile@2x.png", 
      "technologies":["Ruby on rails","css","javascript","html"],
@@ -48,7 +48,7 @@ const projectlist=[
      "live":"ldouglasot.github.io",
      "source":"https://github.com/LDouglasOT/ldouglasot.github.io"
   },{
-    "name":"Multi-Post Stories</span><span>Gain+Glory",
+    "name":"Multi-Post Stories",
      "description":"This is a website developed using html,css and javascript following best cl/ci practicesSometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.", 
      "featured":"../Assets/Images/header-illsutration-mobile@2x.png", 
      "technologies":["Ruby on rails","css","javascript","html"],
@@ -100,7 +100,62 @@ window.addEventListener('load', ()=>{
 
 
 window.onload = function() {
+
+if (window.matchMedia("(max-width: 680px)").matches) {
+
+
+
+const btnclick=document.querySelector('#seeproject')
+let popdetails=projectlist[0]
+let pop = document.createElement('div')
+  pop.classList.add('popout')
+  pop.innerHTML=`
+  
+  <img src="../Assets/Images/SnapshootPortfolio.png" alt="Portifolio image"  class="p-image">
+    <h3 class='taghead'></h3>
+  <h6 class='tagline'>
+    ${popdetails.description}
+  </h6>
+ 
+  <div class="btnwrappers">
+    <a href=${popdetails.live}  class="see" id='seelive'>See Live <img src='../Assets/Images/seeliveicon.png' alt="hello" /></a>
+    <a href=${popdetails.source} class="see" id='source'>See Source <img src='../Assets/Images/Vector.png' alt="hello" /></a>
+  </div>
+  `;
+  
+  const btnsee=document.querySelector('.popupContainer')
+  btnsee.appendChild(pop)
+  btnsee.classList.remove('popupContainer')
+  btnsee.classList.add('popout-container')
+  btnsee.style.display='none'
+  const btnclose=document.querySelector('.p-image')
+
+
+
+const btx=document.querySelectorAll('#seeproject').forEach((project) => {
+
+  project.onclick = () =>{
+    let data={}
+    popdetails=projectlist[project["value"]]
+    document.querySelector('.taghead').innerHtml=`${popdetails.name}`
+
+    // name.innerHTML(popdetails.name)
+    // document.querySelector('.tagline').innerHTML(popdetails.description)
+    // document.querySelector('#seelive').setAttribute('href',popdetails.live)
+    // document.querySelector('#source').setAttribute('href',popdetails.source)
+    console.log(popdetails)
+  btnsee.style.display='flex'
+ }
+ btnclose.addEventListener('click',()=>{
+  btnsee.style.display='none'
+ })
+
+})
+
+} else {
   const btnclick=document.querySelector('#seeproject')
+  console.log(btnclick)
+  
   let pop = document.createElement('div')
     pop.classList.add('popout')
 
@@ -109,13 +164,10 @@ window.onload = function() {
     <div class="desktop-inner">
     <img class="desktop-innerimg" src="/Assets/Images/ICancel.png" alt="SnapshootPortfolioDesktop">
     <img class="project-img" src="/Assets/Images/SnapshootPortfolioDesktop.png" alt="SnapshootPortfolioDesktop">
-    <img class="projectimgmob" src="/Assets/Images/SnapshootPortfolio.png" alt="SnapshootPortfolioDesktop">
-   
     <div class="headbuttons">
-      <div class='headerfullwrapper'>
+      <div>
         <h3 class="itemheader">Keeping track of hundreds of components</h3>
       </div>
-      <span class='mobile-tag'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the release</span>
       <div class="btnwrappers">
         <a href="#"  class="see">See Live <img src='../Assets/Images/seeliveicon.png' alt="hello" /></a>
         <a href="#" class="see">See Source <img src='../Assets/Images/Vector.png' alt="hello" /></a>
@@ -140,20 +192,24 @@ window.onload = function() {
   btnsee.appendChild(pop)
   btnsee.classList.remove('popupContainer')
   btnsee.classList.add('popout-container')
-  // btnsee.style.display='none'
+  btnsee.style.display='none'
   const btnclose=document.querySelector('.p-image')
 const deskclose=document.querySelector('.desktop-innerimg')
-const mobileclose=document.querySelector('.projectimgmob')
+
 const btx=document.querySelectorAll('#seeproject').forEach((project) => {
+console.log(project)
     deskclose.onclick=()=>{
       btnsee.style.display='none' 
     } 
-    mobileclose.onclick=()=>{
-      btnsee.style.display='none' 
-    }
   project.onclick=()=>{
+
     btnsee.style.display='flex'
   }
 })
+}
+if(btnsee.style.display !=='none'){
+
+}else{}
+
 }
 
