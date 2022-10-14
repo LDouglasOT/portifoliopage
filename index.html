@@ -11,18 +11,29 @@
     <header>
       <nav>
         <a href="#" class="nav-h3">Welcome</a>
-        <img
+        <!-- <img
           src="https://img.icons8.com/metro/18/000000/menu.png"
           alt="menu icon"
-        />
+        /> -->
+        <ul class='Navmenu'>
+          <li class="nav-items"><a class="nav-links" href="#works">Portifolio</a> </li>
+          <li  class="nav-items"><a class="nav-links"  href="#about">About</a></li>
+          <li  class="nav-items"><a class="nav-links"  href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
       </nav>
     </header>
     <br />
     <section class="intro-wrapper">
-      <ul class='Navmenu'>
-      <li>Portifolio</li>
-      <li>About</li>
-      <li>Contact</li>
+      <ul class='Navmenux'>
+      <li class="nav-item"><a class="nav-link" href="">Portifolio</a> </li>
+      <li  class="nav-item"><a class="nav-link"  href="">About</a></li>
+      <li  class="nav-item"><a class="nav-link"  href="">Contact</a></li>
       </ul>
       <h2 class="intro-wrappers">
         <span>Hey there, I'm</span><span>Douglas</span>
@@ -67,7 +78,7 @@
 
     <br />
     <br />
-    <section class="works">
+    <section class="works" id='works'>
       <h1 class="w-header"><span>My Recent</span><span>Works</span></h1>
       <br />
       <ul class="works-ul">
@@ -183,7 +194,7 @@
         </li>
       </ul>
     </section>
-    <section class="about-section">
+    <section class="about-section" id="about">
       <h2 class="about-section-h2">About me</h2>
       <p class="about-section-p">
         I can help you build a product , feature or website Look through some of
@@ -254,7 +265,7 @@
         </div>
       </d>
     </section>
-    <section class="contact-desktop">
+    <section class="contact-desktop" id='contact'>
       <div class="image-backgrounder">
       <div class="forms-wrapper">
       <p>
@@ -372,6 +383,7 @@
       >
       <br />
       <div class="form-group"></div>
-    </section>   
+    </section>  
+    <script src="./scripts/index.js"></script> 
   </body>
 </html>

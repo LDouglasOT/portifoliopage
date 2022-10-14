@@ -5,8 +5,86 @@
     src: url("./Assets/fonts/github/Inter-VariableFont_slnt\,wght.ttf");
   }
 
-  .Navmenu {
+  .Navmenux {
     display: none;
+  }
+
+  .nav-items {
+    height: 24px;
+    left: 0;
+    right: 68px;
+    font-weight: 600;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    color: #3a4a42;
+  }
+
+  .Navmenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    background: #fff;
+    width: 100%;
+    left: -120%;
+    opacity: 1;
+    top: 0;
+    gap: 30px;
+    padding-top: 60px;
+  }
+
+  .Navmenu.active {
+    left: 0;
+  }
+
+  .bar {
+    height: 3px;
+    background: #67798e;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+    transition: 0.5s ease;
+    background: #67798e;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+    transition: 0.5s ease;
+    background: #67798e;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+    transition: 0.5s ease all;
+    background: gray;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    height: 15px;
+    width: 20px;
+    gap: 3px;
+    margin: 5px;
+    z-index: 2;
+  }
+
+  .nav-links {
+    color: #3a4a42;
+  }
+
+  .Navmenu li {
+    list-style: none;
+  }
+
+  li a {
+    text-decoration: none;
   }
 
   body {
@@ -277,6 +355,8 @@
     display: flex;
     flex-direction: column;
     list-style: none;
+    justify-content: center;
+    align-items: center;
   }
 
   .lang-item {
@@ -408,7 +488,11 @@
     display: none;
   }
 
-  .Navmenu {
+  a {
+    text-decoration: none;
+  }
+
+  .Navmenux {
     display: flex;
     align-items: center;
     list-style: none;
@@ -417,10 +501,11 @@
     align-self: start;
   }
 
-  .Navmenu li {
+  .Navmenux li {
     margin: 0 5px;
-    color: #172b4d;
+    color: #1a1b1b;
     font-size: 20px;
+    list-style: none;
   }
 
   .intro-wrapper {
@@ -515,6 +600,10 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   .w-header span {
