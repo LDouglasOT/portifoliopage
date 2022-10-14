@@ -114,11 +114,17 @@ window.onload = function() {
     <div class="headbuttons">
       <div class='headerfullwrapper'>
         <h3 class="itemheader">Keeping track of hundreds of components</h3>
+        <ul class='languages-used'>
+        <li class='languages-used-li'>Ruby on Rails</li>
+        <li class='languages-used-li'>css</li>
+        <li class='languages-used-li'>html</li>
+        </ul>
       </div>
+
       <span class='mobile-tag'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the release</span>
       <div class="btnwrappers">
-        <a href="#"  class="see">See Live <img src='../Assets/Images/seeliveicon.png' alt="hello" /></a>
-        <a href="#" class="see">See Source <img src='../Assets/Images/Vector.png' alt="hello" /></a>
+        <a href="#" id="btnwrappers-a" class="see">See Live <img src='../Assets/Images/seeliveicon.png' alt="hello" /></a>
+        <a href="#" id="btnwrappers-a" class="see">See Source <img src='../Assets/Images/Vector.png' alt="hello" /></a>
       </div>
     </div>
     <div class="listech">
