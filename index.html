@@ -165,12 +165,13 @@
       </p>
       <form
       action="https://formspree.io/f/mlevbzgz"
-      method="POST" class="cont">
+      method="POST" class="cont" id="contact-form">
   <div class="input-controller">
-    <input type="text" name="FirstName" placeholder="First Name" required />
-    <input type="text" name="Lastname" placeholder="Last Name" required />
+    <input type="text" name="FirstName" placeholder="First Name" />
+    <input type="text" name="Lastname" placeholder="Last Name" />
   </div>
-  <input class="emailers" type="email" name="email" placeholder="Email address" required />
+  <input class="emailers" id="email-address" type="email" name="email" placeholder="Email address" />
+  <span class="emailerror">Please enter a correct email address in lowercase</span>
   <textarea
     name="Entertext"
     placeholder="Enter text here"
@@ -180,7 +181,7 @@
     maxlength="500"
     required
   ></textarea>
-  <button type="submit" class="resume">Get in touch</button>
+  <button type="submit" class="resume" id="getintouchdesktop">Get in touch</button>
   </form>
 </div>
 <br>
@@ -223,6 +224,7 @@
         action="https://formspree.io/f/mlevbzgz"
         method="POST"
         class="contact"
+        id="contact-form-mobile"
       >
         <input
           type="text"
@@ -231,7 +233,8 @@
           maxlength="30"
           required
         />
-        <input type="email" name="email" placeholder="Email address" required />
+        <input type="email" name="email" placeholder="Email address" id="email-address-mobile" />
+        <span class="emailerror-mobile">Please enter a correct email address in lowercase</span>
         <textarea
           name="Entertext"
           placeholder="Enter text here"
