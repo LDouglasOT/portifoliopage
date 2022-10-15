@@ -12,6 +12,7 @@
   .imagedescription {
     width: 100%;
   }
+
   .emailerror-mobile {
     color: red;
     font-size: 12px;
@@ -23,6 +24,7 @@
     font-size: 12px;
     display: flex;
   }
+
   a {
     text-decoration: none;
   }
