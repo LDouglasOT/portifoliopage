@@ -58,7 +58,19 @@ const projectlist=[
 
 ]
 
+const warnMsg = document.querySelector('.emailerror')
+const contactForm = document.querySelector('#contact-form');
 window.addEventListener('load', ()=>{
+  contactForm.addEventListener('submit', (e) => {
+  const emailValue = document.getElementById('email-address').value;
+  if (emailValue.toLowerCase() !== emailValue) {
+    e.preventDefault();
+    warnMsg.classList.add('active');
+    warnMsg.innerHTML = 'Please write valid an email address with lower letters';
+  } else {
+    contactForm.submit();
+  }
+})
 
   const untitlelist=document.querySelector('.works')
 
@@ -146,7 +158,7 @@ window.onload = function() {
   btnsee.appendChild(pop)
   btnsee.classList.remove('popupContainer')
   btnsee.classList.add('popout-container')
-  // btnsee.style.display='none'
+  btnsee.style.display='none'
   const btnclose=document.querySelector('.p-image')
 const deskclose=document.querySelector('.desktop-innerimg')
 const mobileclose=document.querySelector('.projectimgmob')
@@ -162,4 +174,7 @@ const btx=document.querySelectorAll('#seeproject').forEach((project) => {
   }
 })
 }
+
+
+
 

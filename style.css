@@ -1253,4 +1253,16 @@
   .languages-used {
     display: none;
   }
+
+  .emailerror {
+    color: red;
+    font-size: 12px;
+    display: none;
+  }
+
+  .emailerror.active {
+    color: red;
+    font-size: 12px;
+    display: flex;
+  }
 }
