@@ -59,7 +59,9 @@ const projectlist=[
 ]
 
 const warnMsg = document.querySelector('.emailerror')
+const warnMsgMob = document.querySelector('.emailerror-mobile')
 const contactForm = document.querySelector('#contact-form');
+const contactFormMobile = document.querySelector('#contact-form-mobile');
 window.addEventListener('load', ()=>{
   contactForm.addEventListener('submit', (e) => {
   const emailValue = document.getElementById('email-address').value;
@@ -71,6 +73,19 @@ window.addEventListener('load', ()=>{
     contactForm.submit();
   }
 })
+
+contactFormMobile.addEventListener('submit', (e) => {
+  const emailValue = document.getElementById('email-address-mobile').value;
+  if (emailValue.toLowerCase() !== emailValue) {
+    e.preventDefault();
+    console.log('njjnjd')
+    warnMsgMob.classList.add('active');
+    warnMsgMob.innerHTML = 'Please write valid an email address with lower letters';
+  } else {
+    contactFormMobile.submit();
+  }
+})
+
 
   const untitlelist=document.querySelector('.works')
 

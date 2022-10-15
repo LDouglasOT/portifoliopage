@@ -12,7 +12,17 @@
   .imagedescription {
     width: 100%;
   }
+  .emailerror-mobile {
+    color: red;
+    font-size: 12px;
+    display: none;
+  }
 
+  .emailerror-mobile.active {
+    color: red;
+    font-size: 12px;
+    display: flex;
+  }
   a {
     text-decoration: none;
   }
